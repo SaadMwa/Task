@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>University Admission Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: #263238;
+            background-color: #eef2f5;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        .page {
+            max-width: 800px;
+            margin: auto;
+            padding: 24px;
+            background-color: white;
+            border: 1px solid #cccccc;
+            border-radius: 8px;
+        }
+
+        h1 {
+            color: #234b70;
+            text-align: center;
+            font-size: 28px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            color: #234b70;
+            font-size: 21px;
+            margin-top: 28px;
+        }
+
+        .intro {
+            text-align: center;
+            font-style: italic;
+            word-spacing: 2px;
+        }
+
+        .field {
+            margin-bottom: 16px;
+        }
+
+        .field > label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .text-field {
+            width: 90%;
+            padding: 9px;
+            font-family: Arial, sans-serif;
+            font-size: 15px;
+            border: 1px solid #aaaaaa;
+            border-radius: 4px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: 2px solid #234b70;
+            outline-offset: 2px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 15px;
+            border: 1px solid #234b70;
+            border-radius: 4px;
+        }
+
+        .submit-button {
+            background-color: #234b70;
+            color: white;
+        }
+
+        .reset-button {
+            background-color: white;
+            color: #234b70;
+        }
+
+        button:hover {
+            background-color: #dce7ef;
+            color: #234b70;
+        }
+
+        a {
+            color: #234b70;
+            text-decoration: underline;
+        }
+
+        a:hover {
+            color: #872c2c;
+        }
+
+        .table-container {
+            overflow: auto;
+        }
+
+        table {
+            width: 100%;
+            border: 1px solid #aaaaaa;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #cccccc;
+        }
+
+        th {
+            background-color: #234b70;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #eef2f5;
+        }
+
+        iframe {
+            width: 95%;
+            height: 250px;
+            border: 1px solid #aaaaaa;
+        }
+
+        video {
+            width: 95%;
+        }
+
+        audio {
+            width: 95%;
+        }
+
+        pre {
+            padding: 15px;
+            background-color: #eef2f5;
+            border: 1px solid #cccccc;
+            overflow: auto;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 13px;
+            color: #555555;
+            margin-top: 25px;
+        }
+
+        /* Try these properties, observe them, then remove this class. */
+        .text-practice {
+            text-indent: 20px;
+            text-shadow: 1px 1px 2px #cccccc;
+            word-wrap: break-word;
+            transform: rotate(1deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <a href="index.html">Back to Task 1</a>
+
+        <h1>University Admission Form</h1>
+
+        <p class="intro">
+            Please enter your details to apply for admission.
+        </p>
+
+        <form method="post">
+            <h2>Personal Information</h2>
+
+            <div class="field">
+                <label for="full-name">Full Name</label>
+                <input class="text-field" type="text"
+                       id="full-name" name="full_name" required>
+            </div>
+
+            <div class="field">
+                <label for="password">Password</label>
+                <input class="text-field" type="password"
+                       id="password" name="password" required>
+            </div>
+
+            <div class="field">
+                <label for="dob">Date of Birth</label>
+                <input class="text-field" type="date"
+                       id="dob" name="date_of_birth" required>
+            </div>
+
+            <div class="field">
+                <p><strong>Gender</strong></p>
+
+                <input type="radio" id="male"
+                       name="gender" value="male" required>
+                <label for="male">Male</label>
+
+                <input type="radio" id="female"
+                       name="gender" value="female">
+                <label for="female">Female</label>
+
+                <input type="radio" id="other"
+                       name="gender" value="other">
+                <label for="other">Other</label>
+            </div>
+
+            <h2>Contact Information</h2>
+
+            <div class="field">
+                <label for="email">Email</label>
+                <input class="text-field" type="email"
+                       id="email" name="email" required>
+            </div>
+
+            <div class="field">
+                <label for="phone">Phone Number</label>
+                <input class="text-field" type="tel"
+                       id="phone" name="phone" required>
+            </div>
+
+            <div class="field">
+                <label for="city">City</label>
+                <input class="text-field" type="text"
+                       id="city" name="city" required>
+            </div>
+
+            <div class="field">
+                <label for="address">Address</label>
+                <textarea class="text-field" id="address"
+                          name="address" rows="3" required></textarea>
+            </div>
+
+            <h2>Academic Information</h2>
+
+            <div class="field">
+                <label for="marks">Previous Marks (%)</label>
+                <input class="text-field" type="number"
+                       id="marks" name="marks_percentage"
+                       min="0" max="100" step="0.01" required>
+            </div>
+
+            <div class="field">
+                <label for="program">Preferred Program</label>
+                <select class="text-field" id="program"
+                        name="program" required>
+                    <option value="">Select a program</option>
+                    <option value="cs">Computer Science</option>
+                    <option value="se">Software Engineering</option>
+                    <option value="ai">Artificial Intelligence</option>
+                    <option value="ds">Data Science</option>
+                    <option value="bba">Business Administration</option>
+                </select>
+            </div>
+
+            <h2>Interests and Skills</h2>
+            <p>You may select more than one option.</p>
+
+            <div class="field">
+                <input type="checkbox" id="programming"
+                       name="interests" value="programming">
+                <label for="programming">Programming</label>
+                <br>
+
+                <input type="checkbox" id="mathematics"
+                       name="interests" value="mathematics">
+                <label for="mathematics">Mathematics</label>
+                <br>
+
+                <input type="checkbox" id="writing"
+                       name="interests" value="writing">
+                <label for="writing">Writing</label>
+                <br>
+
+                <input type="checkbox" id="sports"
+                       name="interests" value="sports">
+                <label for="sports">Sports</label>
+            </div>
+
+            <h2>Profile Picture</h2>
+
+            <div class="field">
+                <label for="picture">Choose an Image</label>
+                <input type="file" id="picture"
+                       name="picture" accept="image/*">
+            </div>
+
+            <h2>Additional Information</h2>
+
+            <div class="field">
+                <label for="reason">
+                    Why do you want to join the university?
+                </label>
+                <textarea class="text-field" id="reason"
+                          name="reason" rows="5" required></textarea>
+            </div>
+
+            <button class="submit-button" type="submit">
+                Submit
+            </button>
+
+            <button class="reset-button" type="reset">
+                Reset
+            </button>
+        </form>
+
+        <hr>
+
+        <h2>Sample Student Information</h2>
+        <p>The following records are fictional examples.</p>
+
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Department</th>
+                </tr>
+                <tr>
+                    <td>Ali</td>
+                    <td>Khan</td>
+                    <td>ali@example.com</td>
+                    <td>Computer Science</td>
+                </tr>
+                <tr>
+                    <td>saad</td>
+                    <td>Ahmed</td>
+                    <td>saad@example.com</td>
+                    <td>Software Engineering</td>
+                </tr>
+                <tr>
+                    <td>Hamza</td>
+                    <td>Shah</td>
+                    <td>hamza@example.com</td>
+                    <td>Artificial Intelligence</td>
+                </tr>
+                <tr>
+                    <td>Saad</td>
+                    <td>Malik</td>
+                    <td>saad@example.com</td>
+                    <td>Data Science</td>
+                </tr>
+                <tr>
+                    <td>Usman</td>
+                    <td>Iqbal</td>
+                    <td>usman@example.com</td>
+                    <td>Business Administration</td>
+                </tr>
+            </table>
+        </div>
+
+        <h2>My First Webpage</h2>
+        <iframe src="index.html" title="My Task 1 webpage"></iframe>
+
+        <h2>Video</h2>
+        <video controls>
+            <source src="campus.mp4" type="video/mp4">
+            Your browser does not support the video element.
+        </video>
+        <p><strong>Replace the link with your own video file to see it here.</strong></p>
+
+        <h2>Audio</h2>
+        <audio controls>
+            <source src="introduction.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <p><strong>Replace the link with your own video file to see it here.</strong></p>
+
+
+        <p class="footer">
+            Web Design and Development — Task 02
+        </p>
+    </div>
+</body>
+</html>
